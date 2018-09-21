@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>NCBI使用指导 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="NCBI网址 Batch Entrez(批量下载数据) 其他参考 About Index Page网站首页，通过从网页布局，top,left content,centre，right content，footer分别介绍 ###Top Resources (即left content和footer各种资源分类，为方便从其他网页能快速跳转下一个资源) How To (关于某个资源类的一些使用技巧)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NCBI使用指导">
+<meta property="og:url" content="http://yoursite.com/2018/09/21/About NCBI/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="NCBI网址 Batch Entrez(批量下载数据) 其他参考 About Index Page网站首页，通过从网页布局，top,left content,centre，right content，footer分别介绍 ###Top Resources (即left content和footer各种资源分类，为方便从其他网页能快速跳转下一个资源) How To (关于某个资源类的一些使用技巧)">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-21T14:29:02.090Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="NCBI使用指导">
+<meta name="twitter:description" content="NCBI网址 Batch Entrez(批量下载数据) 其他参考 About Index Page网站首页，通过从网页布局，top,left content,centre，right content，footer分别介绍 ###Top Resources (即left content和footer各种资源分类，为方便从其他网页能快速跳转下一个资源) How To (关于某个资源类的一些使用技巧)">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-About NCBI" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-About NCBI" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/09/21/About NCBI/" class="article-date">
   <time datetime="2018-09-21T13:38:02.262Z" itemprop="datePublished">2018-09-21</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/21/About NCBI/">NCBI使用指导</a>
+    <h1 class="article-title" itemprop="name">
+      NCBI使用指导
     </h1>
   
 
@@ -120,120 +122,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Linux+Blast" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/09/12/Linux+Blast/" class="article-date">
-  <time datetime="2018-09-12T06:22:25.731Z" itemprop="datePublished">2018-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/12/Linux+Blast/">利用win10自带Hyper-V安装Ubuntu以及安装使用本地blast</a>
-    </h1>
+    <a href="/2018/09/12/Linux+Blast/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">利用win10自带Hyper-V安装Ubuntu以及安装使用本地blast</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.ubuntu.com/download/desktop" target="_blank" rel="noopener">Ubuntu下载地址</a></p>
-<p><a href="https://www.cnblogs.com/Amedeo/p/8343513.html" target="_blank" rel="noopener">利用Hyper-V安装Ubuntu</a>(source:CSDN)</p>
-<p><a href="http://www.win7999.com/news/332510800.html" target="_blank" rel="noopener">家庭版Win10安装Hyper-V虚拟机</a>(source:Windows系统粉)</p>
-<p>1.将如下代码添加到记事本中，并另存为Hyper-V.cmd文件。</p>
-<pre><code>pushd &quot;%~dp0&quot;
-
-dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt
-
-for /f %%i in (&apos;findstr /i . hyper-v.txt 2^&gt;nul&apos;) do dism /online /norestart /add-package:&quot;%SystemRoot%\servicing\Packages\%%i&quot;
-
-del hyper-v.txt
-
-Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
-</code></pre><p>2.桌面上，我们找到并右键点击【Hyper-V.cmd】文件图标，在右键菜单中点击：以管理员身份运行。</p>
-<p>3.然后弹出一个 用户帐户控制 - Windows命令处理程序 对话框，点击：是。</p>
-<p>4.然后系统自动进行Windows命令处理，我们等待处理完成以后，在最末处输入：Y，电脑自动重启，进行配置更新。</p>
-<p>5.电脑重启之后，在window管理中可以看到已经成功安装了Hyper-V。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Install-Blast-Program"><a href="#Install-Blast-Program" class="headerlink" title="Install Blast Program"></a>Install Blast Program</h3><p>点击系统搜索按钮，输入terminal打开命令终端terminal(快捷键：ctrl+alt+t)</p>
-<p>切换到下载目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd 下载</span><br></pre></td></tr></table></figure>
-<p>下载blast可执行程序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.7.1+-x64-linux.tar.gz</span><br></pre></td></tr></table></figure>
-<p>解压缩tar.gz文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf ncbi-blast-2.7.1+-x64-linux.tar.gz</span><br></pre></td></tr></table></figure>
-<p>移动文件到我安装本地程序的目录</p>
-<pre><code>$ mv ncbi-blast-2.7.1+ ~/local/app/ 
-
-$ cd ~/local/app/  
-
-$ mv ncbi-blast-2.7.1+ blast
-</code></pre><p>将BLAST+可执行程序所在目录（bin）的绝对路径加入到环境变量$PATH，通过pwd命令获取blast所在目录路径</p>
-<pre><code>$ echo &quot;export PATH=blast所在路径/bin:\$PATH&quot; &gt;&gt; ~/.bashrc
-
-$ source ~/.bashrc #使配置生效 
-
-$ blastn -version #查看配置是否成功
-</code></pre><h3 id="配置本地Blast库"><a href="#配置本地Blast库" class="headerlink" title="配置本地Blast库"></a><a href="https://blog.csdn.net/flyfrommath/article/details/52945586" target="_blank" rel="noopener">配置本地Blast库</a></h3><p>（source：CSDN）</p>
-<p>根据自己习惯创建存放核酸蛋白质库数据的文件目录</p>
-<p>在根目录下创建data/blast</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir data | cd data | mkdir blast</span><br></pre></td></tr></table></figure>
-<p>在blast文件夹下创建并且编辑.ncbirc全局配置文件，内容如下：</p>
-<pre><code>Start the section for BLAST configuration
-
-[BLAST]
-
-; Specifies the path where BLAST databases are installed
-BLASTDB=/home/用户名/data/blast
-
-; Specifies the data sources to use for automatic resolution
-
-; for sequence identifiers
-DATA_LOADERS=blastdb
-
-; Specifies the BLAST database to use resolve protein sequences
-BLASTDB_PROT_DATA_LOADER=/home/用户名/data/blast/nr
-
-; Specifies the BLAST database to use resolve protein sequences
-BLASTDB_NUCL_DATA_LOADER=/home/用户名/data/blast/nt
-
-BATCH_SIZE=10G
-
-; Windowmasker settings
-
-[WINDOW_MASKER]
-WINDOW_MASKER_PATH=home/用户名/data/blast/windowmasker
-
-; end of file
-</code></pre><p>下载库文件（时间较慢）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ update_blastdb.pl nt nr</span><br></pre></td></tr></table></figure>
-<p>解压库文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nohup time tar -zxvf *.tar.gz &gt; log2 &amp;</span><br></pre></td></tr></table></figure>
-<p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ blastn -query query文件名 -db nt -outfmt 11 -out &quot;输出文件名&quot; -num_threads 8</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/09/12/Linux+Blast/" data-id="cjmc3qu4a0001wwva85w0irfx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
